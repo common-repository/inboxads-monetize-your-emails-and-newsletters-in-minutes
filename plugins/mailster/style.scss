@@ -1,0 +1,57 @@
+
+@import '../../assets/styles/variables';
+
+.wpr-inboxads-module-settings {
+	position: relative;
+	padding-top: 10px;
+	border-top: 1px solid rgba(0,0,0,0.1);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	background-color: rgba(0, 0, 0, 0.025);
+
+	h3 {
+		padding-left: 10px;
+	}
+
+	fieldset {
+		border-width: 0;
+
+		label {
+			width: 60px;
+			display: inline-block;
+		}
+
+		input,
+		select {
+			width: calc( 100% - 60px );
+			box-sizing: border-box;
+		}
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0;
+		visibility: hidden;
+		background-color: #fff;
+		transition: opacity 0.2s, visibility 0.2s;
+	}
+
+	.settings-keeper {
+		display: none;
+	}
+}
+
+module.loading .wpr-inboxads-module-settings {
+	&:after {
+		opacity: 0.9;
+		visibility: visible;
+	}
+}
+
+modulebuttons a.mailster-btn {
+	vertical-align: middle;
+}

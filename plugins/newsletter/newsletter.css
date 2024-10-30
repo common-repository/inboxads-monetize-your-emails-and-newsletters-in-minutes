@@ -1,0 +1,258 @@
+#tnpc-block-options-form > h2 {
+    display: none;
+}
+.idsnl {
+    margin: 20px 5px;
+    line-height: normal;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+.idsnl .title {
+    font-family: 'Univia-Pro';
+    font-weight: 700;
+    font-size: 21px;
+    margin-bottom: 5px;
+    color: black;
+}
+.idsnl .subtext {
+    color: #1E1E1E;
+    font-size: 14px;
+}
+.idsnl .formitem {
+    margin-top: 20px;
+}
+.idsnl .formitem > label {
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+}
+.idsnl .formitem > span {
+    color: #898888;
+    font-size: 13px;
+    display: block;
+}
+.idsnl .formitem > input {
+    width: calc(100% - 200px);
+    font-size: 14px;
+    color: black;
+    margin-top: 7px;
+    margin-left: -1px;
+}
+.idsnl .formitem > input::placeholder {
+    color: #bcbcbc;
+    font-size: 14px;
+}
+.idsnl .formitem.haserror > input {
+    border-color: red;
+    background-color: #ffeded;
+}
+.idsnl .formitem.haserror::after {
+    content: 'This field is required';
+    display: block;
+    color: red;
+    margin: 2px;
+}
+.idsnl .formelem {
+    margin-top: 7px;
+}
+.idsnl .btn {
+    color: white;
+    background: #6AAE19;
+    border: none;
+    width: calc(100% - 200px);
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 36px;
+    cursor: pointer;
+}
+
+
+
+.ZoneFormats {
+    border: 1px solid #bcbcbc;
+    border-radius: 3px;
+    padding: 20px;
+    width: calc(100% - 200px);
+    background: white;
+  }
+    .ZoneFormats .Subtitle {
+        color: black;
+        display: block;
+        font-weight: 600;
+        padding-bottom: 15px;
+    }
+    .ZoneFormats ul {
+        margin: 0;
+        padding: 0 0 15px 0;
+        list-style: none;
+    }
+        .ZoneFormats ul:last-child {
+            padding-bottom: 0;
+        }
+        .ZoneFormats ul li {
+            display: inline-block;
+            width: 100px;
+            position: relative;
+            padding: 0 0 20px 22px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            margin: 0;
+            color: black;
+        }
+        .ZoneFormats ul.two_col li {
+            width: 50%;
+        }
+        .ZoneFormats ul li:before {
+            content: '';
+            display: block;
+            border: 1px solid #bcbcbc;
+            width: 16px;
+            height: 16px;
+            border-radius: 16px;
+            position: absolute;
+            left: 0;
+            top: 1px;
+        }
+        .ZoneFormats ul li > div {
+            width: 64px;
+            height: 64px;
+            border-radius: 3px;
+            border: 1px solid #bcbcbc;
+            background: #ededed;
+            margin-top: 4px;
+            position: relative;
+            text-align: center;
+        }
+            .ZoneFormats ul li > div > div {
+                border: 1px solid #004CBA;
+                background: white;
+                margin: 0 auto;
+                border-radius: 2px;
+            }
+        .ZoneFormats ul li.on {
+            color: #F47521;
+            font-weight: bold;
+        }
+            .ZoneFormats ul li.on:before {
+                background: #F47521;
+                border-color: #F47521;
+            }
+            .ZoneFormats ul li.on > div {
+                background: #F47521;
+                border-color: #F47521;
+            }
+        .ZoneFormats ul li > div > table {
+            background: white;
+            border-collapse: collapse;
+            margin: 0 auto;
+            width: 48px;
+            height: 19px;
+            margin-top: 22px;
+        }
+            .ZoneFormats ul li > div > table td {
+                border: 1px solid #004CBA;
+                padding: 2px;
+            }
+.rec_300_250 div div {
+    width: 36px;
+    height: 24px;
+    margin-top: 19px !important;
+}
+.rec_366_280 div div {
+    width: 44px;
+    height: 31px;
+    margin-top: 15px !important;
+}
+.rec_320_50 div div {
+    width: 38px;
+    height: 10px;
+    margin-top: 25px !important;
+}
+.rec_600_155 div div {
+    width: 44px;
+    height: 10px;
+    margin-top: 26px !important;
+}
+.rec_728_90 div div {
+    width: 42px;
+    height: 6px;
+    margin-top: 28px !important;
+}
+.rec_970_90 div div {
+    width: 50px;
+    height: 6px;
+    margin-top: 28px !important;
+}
+.rec_970_250 div div {
+    width: 50px;
+    height: 14px;
+    margin-top: 24px !important;
+}
+.rec_160_600 div div {
+    width: 10px;
+    height: 38px;
+    margin-top: 12px !important;
+}
+.rec_300_600 div div {
+    width: 20px;
+    height: 38px;
+    margin-top: 12px !important;
+}
+.rec_300_1050 div div {
+    width: 20px;
+    height: 52px;
+    margin-top: 5px !important;
+}
+
+.ZonePreview {
+    position: absolute;
+    border: 1px solid #004CBA;
+    border-radius: 3px;
+    background: white;
+    width: 180px;
+    right: 20px;
+}
+    .ZonePreview .imgp {
+        display: none;
+    }
+    .ZonePreview.on .imgp {
+        display: block;
+    }
+    .ZonePreview.on .txtp {
+        display: none;
+    }
+    .ZonePreview.on > div {
+        background: #004CBA;
+    }
+        .ZonePreview.on > div > img {
+            display: none;
+        }
+    .ZonePreview > div {
+        font-size: 16px;
+        text-align: center;
+        padding: 15px 0 5px 0;
+    }
+        .ZonePreview > div > img {
+            margin: 40px 0 10px 0;
+        }
+    .ZonePreview .imgp {
+        height: 194px;
+        margin: 15px 0;
+    }
+    .ZonePreview .txtp {
+        color: #bcbcbc;
+        height: 132px;
+        padding-top: 20px;
+        font-size: 13px;
+    }
+    .ZonePreview div span {
+        color: #004CBA;
+        display: block;
+        text-align: center;
+        font-size: 16px;
+    }
+    .ZonePreview.on div span {
+        color: white;
+    }

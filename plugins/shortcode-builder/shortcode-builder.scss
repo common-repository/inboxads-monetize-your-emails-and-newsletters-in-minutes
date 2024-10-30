@@ -1,0 +1,129 @@
+@import '../../assets/styles/variables';
+
+$padding: 15px;
+$bd-radius: 2px;
+
+#wpr-inboxads-trigger {
+	position: absolute;
+	top: 0; left: 0;
+}
+
+.wpr-inboxads-panel {
+	max-height: 90%;
+	border-radius: 2px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	z-index: 100104 !important;
+
+	&,
+	div,
+	input,
+	textarea { box-sizing: border-box; }
+
+	.wp-picker-container {
+		&, div { box-sizing: content-box; }
+	}
+
+	#TB_title { height: 42px; }
+	#TB_ajaxWindowTitle,
+	.tb-close-icon,
+	.tb-close-icon:before { line-height: 42px; }
+	.tb-close-icon { width: 42px; height: 42px; }
+	#TB_ajaxWindowTitle {
+		width: calc(100% - 52px);
+		padding-right: 42px;
+	}
+
+	&, #TB_ajaxContent { height: auto !important; }
+
+	#TB_ajaxContent {
+		width: 100% !important;
+		padding: 0; margin: 0 auto;
+	}
+}
+
+#wpr-inboxads-wrap {
+	.header,
+	.footer { padding: $padding; }
+
+	.wpr-input-row,
+	input[type="text"],
+	select {
+		width: 100%;
+	}
+
+	.wpr-input-row {
+		padding: $padding;
+		border-top: 1px dashed $color_border;
+
+		&:before,
+		&:after {
+			content: " ";
+			display: table;
+		}
+		&:after { clear: both; }
+
+		label {
+			padding: 5px 0;
+			margin: 0 10px 0 0;
+			font-weight: bold;
+		}
+	}
+
+	label { padding-top: 15px; }
+
+	.wpr-input-cont {
+		margin: 5px 15px 0 0;
+		display: inline-block;
+
+		input { margin: 0 0 0 7px !important; }
+	}
+
+	.footer {
+		margin: -1px 0 0 0;
+		border-top: 1px solid $color_border;
+		background-color: $color_bg-alt;
+
+		.button {
+			height: 32px;
+			padding: 2px 10px;
+			display: inline-block;
+			padding: 4px 15px;
+			line-height: 20px;
+			color: #555;
+			font-weight: bold;
+			border: 1px solid #eee;
+			border-radius: 3px;
+			background-color: #f4f4f4;
+			text-decoration: none !important;
+			transition: background 0.2s, box-shadow 0.2s;
+		}
+
+		.add-sc {
+			color: #fff;
+			font-weight: bold;
+			margin-right: 15px;
+			background-color: $color_brand;
+			text-shadow: 0 1px 1px darken($color_brand, 5);
+			box-shadow: inset 0 -2px 0 darken($color_brand, 10);
+		}
+
+		.cancel-sc {
+			background-color: #ECECEC;
+			box-shadow: inset 0 1px 3px #E0E0E0;
+		}
+	}
+}
+
+@media screen and (min-width: 620px) {
+	.wpr-inboxads-panel {
+		width: 600px !important;
+		margin-left: -300px !important;
+	}
+}
+
+@media screen and (min-width: 1160px) {
+	.wpr-inboxads-panel {
+		width: 800px !important;
+		margin-left: -400px !important;
+	}
+}

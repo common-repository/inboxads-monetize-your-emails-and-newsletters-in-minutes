@@ -1,0 +1,557 @@
+
+@import 'variables';
+
+@import 'chart';
+
+@import 'simplebar';
+
+.toplevel_page_wpr-inboxads {
+
+	// Common.
+
+	b,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	strong {
+		font-weight: 700;
+	}
+
+	.button {
+		height: 30px;
+		line-height: 28px;
+		min-width: 115px;
+		padding: 1px 16px;
+		font-size: 12px;
+		font-weight: bold;
+		text-shadow: none;
+		box-shadow: none !important;
+		text-align: center;
+		vertical-align: middle !important;
+		transition: background-color 0.2s;
+	}
+
+	.button-primary {
+		color: #fff;
+		border-radius: $border_radius;
+		border: none;
+		box-shadow: none;
+		background-color: $color_green;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: darken( $color_green, 5 );
+		}
+	}
+
+	.link {
+		background: none;
+		border: none;
+		padding: 0;
+		font-size: 14px;
+		font-weight: bold;
+		color: $color_border;
+		text-decoration: none;
+		cursor: pointer;
+		display: inline-block;
+		transition: color 0.2s;
+
+		+ .link {
+			margin-left: 18px;
+		}
+	}
+
+	.link-primary {
+		color: $color_green;
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: darken( $color_green, 10 );
+		}
+	}
+
+	input[type=text],
+	input[type=password] {
+		width: 100%;
+		height: 54px;
+		border-radius: $border_radius-l;
+		padding: 16px 20px;
+		font-size: 16px;
+		line-height: 22px;
+		margin: 0;
+	}
+
+	form {
+		.field {
+			margin-bottom: 22px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	// Content.
+	#wpr-inboxads-content {
+		position: relative;
+		max-width: 1062px;
+		font-family: 'Open Sans';
+		letter-spacing: -0.426667px;
+	}
+
+	// Modals.
+	#wpr-inboxads-modal-wrap {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: 0;
+		padding: 100px 20px;
+		display: flex;
+		flex-flow: column;
+		align-content: center;
+		border-radius: $border_radius;
+		border: 1px solid $color_border;
+		background-color: rgba(255,255,255,0.892);
+		transition: opacity 0.2s, visibility 0.2s;
+		z-index: 1001;
+
+		&,
+		.modal {
+			opacity: 0;
+			visibility: hidden;
+
+			&.visible {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	.modal {
+		position: absolute;
+		max-width: 500px;
+		text-align: center;
+		align-self: center;
+		border-radius: $border_radius-l;
+		background-color: $color_bg;
+		box-shadow: 0px 3px 17px rgba(0, 0, 0, 0.25);
+		box-sizing: border-box;
+		transform: translate( 0, 40px );
+		transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+		z-index: 0;
+
+		&.visible {
+			position: relative;
+			transform: translate( 0, 0 );
+			z-index: 1;
+		}
+
+		> .close {
+			position: absolute;
+			top: 11px;
+			right: 11px;
+			width: 32px;
+			height: 32px;
+			padding: 9px;
+			box-sizing: border-box;
+		}
+
+		.inner {
+			overflow: hidden;
+		}
+	}
+
+	// Activation modal.
+	#wpr-inboxads-activate {
+		padding: 36px 72px 26px;
+
+		.title {
+			color: $color_brand;
+			font-size: 24px;
+			line-height: 42px;
+			margin-bottom: 0;
+		}
+
+		p.desc {
+			font-size: 16px;
+			line-height: 28px;
+			margin: 10px 0 20px;
+		}
+
+		input[type=submit] {
+			width: 100%;
+			height: 54px;
+			font-size: 21px;
+			line-height: 42px;
+			border-radius: $border_radius-l;
+		}
+
+		.create-account {
+			margin-top: 22px;
+			font-size: 16px;
+			line-height: 22px;
+			display: block;
+		}
+
+		.message {
+			font-size: 14px;
+			margin-bottom: 22px;
+
+			p {
+				display: inline-block;
+				margin: 0;
+			}
+		}
+
+		.message-error strong {
+			color: $color-red;
+		}
+	}
+
+	// Plugins modal.
+	#wpr-inboxads-plugins {
+		width: 100%;
+		max-width: 550px;
+		border: 1px solid $color_border;
+		background-color: $color_bg-alt;
+
+		.header {
+			padding: 24px 20px 20px;
+			text-align: center;
+			border-bottom: 1px solid $color_border;
+			background-color: $color_bg;
+
+			h2 {
+				font-size: 16px;
+				line-height: 24px;
+				margin: 0;
+			}
+		}
+
+		.plugins-list-scroll-wrap {
+			padding: 10px 33px 0;
+
+			.plugins-list-scroll-inner {
+				max-height: 600px;
+				padding-right: 39px;
+			}
+		}
+
+		#wpr-inboxads-plugins-list {
+			text-align: left;
+			margin: 0;
+
+			li {
+				padding: 10px 0 15px;
+				margin: 0;
+				border-bottom: 1px solid $color_border;
+
+				&:first-child {
+					padding-top: 0;
+				}
+			}
+		}
+
+		.footer {
+			padding: 28px 0;
+		}
+	}
+
+	// Options.
+	.wpr-inboxads-options {
+		.title {
+			padding-bottom: 0;
+
+			img {
+				width: $logo_width;
+				height: $logo_height;
+				display: block;
+			}
+		}
+
+		.admin-box {
+			margin-top: 15px;
+			padding: 30px 30px 0;
+			border-radius: $border_radius;
+			border: 1px solid $color_border;
+			background-color: $color_bg;
+
+			> .title {
+				margin-top: 0;
+				margin-bottom: 6px;
+				font-size: 16px;
+				line-height: 24px;
+			}
+
+			p.desc {
+				color: $color_text-fade;
+				font-size: 13px;
+				line-height: 20px;
+				margin: 0 0 18px;
+
+				.button,
+				.link {
+					margin-top: 10px;
+				}
+			}
+		}
+
+		.submit {
+			padding-top: 0;
+		}
+	}
+
+	// Account.
+	#wpr-inboxads-account {
+		p.desc {
+			margin-bottom: 14px;
+		}
+
+		p.status {
+			font-size: 14px;
+			line-height: 19px;
+			margin-top: 0;
+			margin-bottom: 17px;
+		}
+	}
+
+	// Plugins list.
+	.wpr-inboxads-plugins-list {
+		.plugin {
+			.icon {
+				display: inline-block;
+				width: 13px;
+				height: 13px;
+				vertical-align: middle;
+				margin-right: 5px;
+				background-image: url( '../images/icon-disabled.svg' );
+				background-repeat: no-repeat;
+				background-size: 100%;
+
+				&.active {
+					background-image: url( '../images/icon-active.svg' );
+				}
+
+				&.installed {
+					background-image: url( '../images/icon-installed.svg' );
+				}
+			}
+
+			&.active .status {
+				color: $color_green;
+				font-weight: bold;
+			}
+
+			strong {
+				font-size: 14px;
+				line-height: 20px;
+
+				small {
+					font-size: 14px;
+					font-weight: normal;
+				}
+			}
+
+			.status,
+			.api-status {
+				font-size: 13px;
+				line-height: 20px;
+			}
+		}
+	}
+
+	#wpr-inboxads-installed-plugins-list {
+		display: flex;
+		flex-flow: row;
+		flex-wrap: wrap;
+		border-radius: $border_radius;
+		border: 1px solid $color_border;
+		background-color: $color_bg-alt;
+		overflow: hidden;
+
+		.plugin {
+			flex-grow: 1;
+			padding: 8px 16px 12px;
+			box-shadow: 1px 1px 0 $color_border;
+			margin: 0 !important;
+
+			.api-status {
+				display: block;
+
+				strong {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+	// Stats.
+	#wpr-inboxads-stats {
+		.stats-chart {
+			position: relative;
+			padding: 0 0 21px;
+
+			@media ( max-width: 420px ) {
+				margin-left: -30px;
+				margin-right: -30px;
+			}
+
+			canvas {
+				position: relative;
+				z-index: 2;
+			}
+
+			&.stats-empty {
+				overflow: hidden;
+				min-height: 220px;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 6px;
+					left: 41px;
+					right: 37px;
+					bottom: 27px;
+					background-color: $color_bg-alt;
+					z-index: 1;
+				}
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					width: 294px;
+					height: 208px;
+					margin-top: -115px;
+					margin-left: -157px;
+					background-color: $color_bg-alt;
+					border-radius: 50%;
+					background-image: url( '../images/icon-no-data.svg' );
+					background-size: 139px 130px;
+					background-position: center;
+					background-repeat: no-repeat;
+					z-index: 2;
+				}
+
+				@media (max-width: 800px) {
+					min-height: 140px;
+
+					&:after {
+						width: 147px;
+						height: 104px;
+						margin-top: -62px;
+						margin-left: -73px;
+						background-size: 70px 65px;
+					}
+				}
+
+				@media (max-width: 420px) {
+					min-height: 0;
+
+					&:after {
+						background-color: transparent;
+					}
+				}
+			}
+		}
+
+		.chart-legend {
+			margin-bottom: 25px;
+
+			.legend {
+				display: inline-block;
+				min-width: 200px;
+				margin-right: 20px;
+				color: #000;
+				font-size: 14px;
+				line-height: 22px;
+
+				&:before {
+					content: '';
+					width: 18px;
+					height: 18px;
+					margin-right: 10px;
+					display: inline-block;
+					border-radius: $border_radius-s;
+					background-color: $color_border;
+					vertical-align: middle;
+				}
+
+				&.legend-impressions:before {
+					background-color: $color_orange;
+				}
+
+				&.legend-revenue:before {
+					background-color: $color_green;
+				}
+			}
+		}
+
+		.more-stats {
+			min-width: 150px;
+			margin-top: 10px;
+		}
+
+		> :last-child {
+			margin-bottom: 30px;
+		}
+	}
+
+	// Delete data.
+	#wpr-delete-data-warning {
+		padding: 18px;
+		max-width: 475px;
+		border: 1px solid $color_orange;
+		border-radius: $border_radius;
+
+		strong,
+		p {
+			color: $color_orange;
+		}
+
+		strong {
+			font-size: 16px;
+			line-height: 20px;
+
+			svg {
+				vertical-align: middle;
+			}
+		}
+
+		p.desc {
+			margin-top: 11px;
+			margin-bottom: 23px;
+		}
+
+		.buttons {
+			margin: 0;
+		}
+	}
+
+	// JavaScript fallbacks.
+
+	&.js {
+		#wpr-delete-data-warning {
+			display: none;
+		}
+	}
+
+	&.no-js {
+		#wpr-delete-data {
+			display: none;
+		}
+
+		#wpr-delete-data-warning {
+			display: block;
+		}
+	}
+
+}
